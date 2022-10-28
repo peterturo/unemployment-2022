@@ -1,4 +1,4 @@
-# unemployment-inclass-2022
+# unemployment-2022
 
 
 ## Setup
@@ -41,8 +41,14 @@ Run an example script:
 python app/my_script.py
 ```
 
-Run the unemployment report:
+Run the unemployment report (JSON):
 
 ```sh
-python app/unemployment.py
+python app/json_unemployment.py
+```
+
+Run the unemployment report (CSV):
+
+```sh
+python app/csv_unemployment.py
 ```
