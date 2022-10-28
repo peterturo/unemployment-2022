@@ -23,3 +23,16 @@ latest = unemployment_df.iloc[0]
 
 print("LATEST UNEMPLOYMENT RATE:", f"{latest['value']}%,", latest['timestamp'])
 print("----------------")
+
+# Challenge B
+# 
+# What is the average unemployment rate for all months during this calendar year?
+# ... How many months does this cover?
+
+# https://stackoverflow.com/questions/11350770/filter-pandas-dataframe-by-substring-criteria
+
+
+csv_cy_data = unemployment_df[unemployment_df["timestamp"].str.contains("2022")]
+
+print (f"Average Unemployment Rate in 2022: {mean(csv_cy_data['value'])}%")
+print("No. of Months in Calendar Year:", len(csv_cy_data))
