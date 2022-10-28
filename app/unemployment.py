@@ -5,6 +5,7 @@ from statistics import mean
 
 import requests
 from dotenv import load_dotenv # <--- ADDITION
+import plotly.express as px
 
 load_dotenv() # <--- ADDITION
 
@@ -50,3 +51,26 @@ for c in cy_data:
 
 print (f"AVERAGE UNEMPLOYMENT RATE IN 2022: {mean(cy_rates)}%")
 print("NO. OF MONTHS IN CALENDAR YEAR:", len(cy_rates))
+
+
+
+# Challenge C
+# 
+# Plot a line chart of unemployment rates over time.
+
+
+
+for u in unemployment_data:
+    u["value"] = float(u["value"])
+
+# help from https://www.geeksforgeeks.org/python-type-conversion-in-dictionary-values/
+
+
+line_graph_json = px.line(unemployment_data, x="date", y="value", 
+               labels={
+                        "date": "Date","value": "Rate"
+                        },
+                     # axis labels help from https://plotly.com/python/figure-labels/
+                    title="Unemployment Rates Over Time")
+
+line_graph_json.show()
