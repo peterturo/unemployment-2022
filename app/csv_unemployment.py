@@ -8,6 +8,8 @@ import plotly.express as px
 
 load_dotenv() # <--- ADDITION
 
+API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
+
 unemployment_url_csv = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}&datatype=csv"
 
 unemployment_df = read_csv(unemployment_url_csv)
@@ -19,4 +21,5 @@ unemployment_df = read_csv(unemployment_url_csv)
 
 latest = unemployment_df.iloc[0]
 
-print("Most Recent Unemployment Rate:", f"{latest['value']}%,", latest['timestamp'])
+print("LATEST UNEMPLOYMENT RATE:", f"{latest['value']}%,", latest['timestamp'])
+print("----------------")
