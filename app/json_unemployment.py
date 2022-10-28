@@ -21,6 +21,7 @@ parsed_response = json.loads(response.text)
 #pprint(parsed_response)
 
 
+
 # Challenge A
 #
 # What is the most recent unemployment rate? And the corresponding date?
