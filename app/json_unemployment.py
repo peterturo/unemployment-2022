@@ -52,6 +52,7 @@ for c in cy_data:
 
 print (f"AVERAGE UNEMPLOYMENT RATE IN 2022: {mean(cy_rates)}%")
 print("NO. OF MONTHS IN CALENDAR YEAR:", len(cy_rates))
+print("----------------")
 
 
 

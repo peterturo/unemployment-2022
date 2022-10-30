@@ -1,5 +1,4 @@
 import os
-from pprint import pprint
 from statistics import mean
 
 from pandas import read_csv
@@ -21,9 +20,9 @@ unemployment_df = read_csv(unemployment_url_csv)
 # What is the most recent unemployment rate? And the corresponding date? 
 # Display the unemployment rate using a percent sign.
 
-latest = unemployment_df.iloc[0]
+latest_csv = unemployment_df.iloc[0]
 
-print("LATEST UNEMPLOYMENT RATE:", f"{latest['value']}%,", latest['timestamp'])
+print("LATEST UNEMPLOYMENT RATE:", f"{latest_csv['value']}%,", latest_csv['timestamp'])
 print("----------------")
 
 
@@ -36,11 +35,11 @@ print("----------------")
 # https://stackoverflow.com/questions/11350770/filter-pandas-dataframe-by-substring-criteria
 
 
-csv_cy_data = unemployment_df[unemployment_df["timestamp"].str.contains("2022")]
+cy_data_csv = unemployment_df[unemployment_df["timestamp"].str.contains("2022")]
 
-print (f"AVERAGE UNEMPLOYMENT RATE IN 2022: {mean(csv_cy_data['value'])}%")
-print("NO. OF MONTHS IN CALENDAR YEAR:", len(csv_cy_data))
-
+print (f"AVERAGE UNEMPLOYMENT RATE IN 2022: {mean(cy_data_csv['value'])}%")
+print("NO. OF MONTHS IN CALENDAR YEAR:", len(cy_data_csv))
+print("----------------")
 
 
 # Challenge C
