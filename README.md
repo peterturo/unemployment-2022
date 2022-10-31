@@ -52,3 +52,10 @@ Run the unemployment report (CSV):
 ```sh
 python app/csv_unemployment.py
 ```
+
+
+Run stocks report:
+
+```sh
+python app/stocks.py
+```
