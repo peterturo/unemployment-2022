@@ -1,13 +1,9 @@
-import os
 from statistics import mean
 
 from pandas import read_csv
-from dotenv import load_dotenv # <--- ADDITION
 import plotly.express as px
 
-load_dotenv() # <--- ADDITION
-
-API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
+from app.alpha import API_KEY
 
 unemployment_url_csv = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}&datatype=csv"
 
