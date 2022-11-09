@@ -1,4 +1,4 @@
-from app.unemployment import format_pct, fetch_unemployment_data
+from app.json_unemployment import format_pct, fetch_unemployment_data
 
 
 def test_percent_sign_formatting():
