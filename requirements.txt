@@ -10,7 +10,9 @@ sendgrid==6.6.0
 
 
 flask # <--- ADD FOR WEB APP
-#gunicorn
+
+# the heroku server wants to use this package to run our web app
+gunicorn
 
 
 # using this to find and run our tests:
