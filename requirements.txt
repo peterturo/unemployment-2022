@@ -8,5 +8,10 @@ plotly
 
 sendgrid==6.6.0
 
-# using this to find and run our tests
+
+flask # <--- ADD FOR WEB APP
+#gunicorn
+
+
+# using this to find and run our tests:
 pytest
